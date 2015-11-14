@@ -87,6 +87,50 @@
 		<Unit filename="inc\stm32f746xx.h" />
 		<Unit filename="inc\stm32f7xx.h" />
 		<Unit filename="inc\system_stm32f7xx.h" />
+		<Unit filename="nOS\inc\nOS.h" />
+		<Unit filename="nOS\inc\port\GCC\ARM_Cortex_M7\nOSPort.h" />
+		<Unit filename="nOS\src\nOSAlarm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSEvent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSFlag.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSList.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSMem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSMutex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSQueue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSSched.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSSem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSSignal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSThread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSTime.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSTimer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\port\GCC\ARM_Cortex_M7\nOSPort.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\main.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -96,53 +140,10 @@
 		<Unit filename="src\system_stm32f7xx.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\include\nOS.h" />
-		<Unit filename="..\..\include\port\GCC\ARM_Cortex_M7\nOSPort.h" />
-		<Unit filename="..\..\source\nOSAlarm.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSEvent.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSFlag.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSList.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSMem.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSMutex.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSQueue.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSSched.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSSem.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSSignal.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSThread.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSTime.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSTimer.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\port\GCC\ARM_Cortex_M7\nOSPort.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Extensions>
 			<code_completion />
 			<debugger>
+				<target_debugging_settings target="Release" active_interface="" />
 				<target_debugging_settings target="Debug" active_interface="ST-link">
 					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
 						<family_options family_id="STMicroelectronics">
@@ -160,7 +161,6 @@
 						</family_options>
 					</debug_interface>
 				</target_debugging_settings>
-				<target_debugging_settings target="Release" active_interface="" />
 			</debugger>
 			<envvars />
 		</Extensions>
