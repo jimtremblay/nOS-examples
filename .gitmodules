@@ -1,0 +1,3 @@
+[submodule "nOS"]
+	path = nOS
+	url = https://github.com/jimtremblay/nOS
