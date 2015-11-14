@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<EmBlocks_project_file>
-	<EmBlocksVersion release="2.30" revision="1" />
+<EmBitz_project_file>
+	<EmBitzVersion release="0.40" revision="0" />
 	<FileVersion major="1" minor="0" />
 	<Project>
 		<Option title="emBlocks-GCC_STM32F429I-Discovery" />
@@ -78,6 +78,17 @@
 			<Add option="-eb_start_files" />
 			<Add option="-eb_lib=n" />
 		</Linker>
+		<Unit filename="cmsis\arm_common_tables.h" />
+		<Unit filename="cmsis\arm_math.h" />
+		<Unit filename="cmsis\core_cm4.h" />
+		<Unit filename="cmsis\core_cm4_simd.h" />
+		<Unit filename="cmsis\core_cmFunc.h" />
+		<Unit filename="cmsis\core_cmInstr.h" />
+		<Unit filename="config\nOSConfig.h" />
+		<Unit filename="inc\stm32f4xx.h" />
+		<Unit filename="inc\stm32f4xx_conf.h" />
+		<Unit filename="inc\system_stm32f4xx.h" />
+		<Unit filename="readme.txt" />
 		<Unit filename="SPL\inc\misc.h" />
 		<Unit filename="SPL\inc\stm32f4xx_adc.h" />
 		<Unit filename="SPL\inc\stm32f4xx_can.h" />
@@ -197,17 +208,6 @@
 		<Unit filename="SPL\src\stm32f4xx_wwdg.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="cmsis\arm_common_tables.h" />
-		<Unit filename="cmsis\arm_math.h" />
-		<Unit filename="cmsis\core_cm4.h" />
-		<Unit filename="cmsis\core_cm4_simd.h" />
-		<Unit filename="cmsis\core_cmFunc.h" />
-		<Unit filename="cmsis\core_cmInstr.h" />
-		<Unit filename="config\nOSConfig.h" />
-		<Unit filename="inc\stm32f4xx.h" />
-		<Unit filename="inc\stm32f4xx_conf.h" />
-		<Unit filename="inc\system_stm32f4xx.h" />
-		<Unit filename="readme.txt" />
 		<Unit filename="src\main.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -219,54 +219,54 @@
 		</Unit>
 		<Unit filename="stm32f429zi_flash.ld" />
 		<Unit filename="stm32f429zi_sram.ld" />
-		<Unit filename="..\..\include\nOS.h" />
-		<Unit filename="..\..\include\port\GCC\ARM_Cortex_M4\nOSPort.h" />
-		<Unit filename="..\..\source\nOSAlarm.c">
+		<Unit filename="..\nOS\inc\nOS.h" />
+		<Unit filename="..\nOS\inc\port\GCC\ARM_Cortex_M4\nOSPort.h" />
+		<Unit filename="..\nOS\src\nOSAlarm.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\source\nOSEvent.c">
+		<Unit filename="..\nOS\src\nOSEvent.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\source\nOSFlag.c">
+		<Unit filename="..\nOS\src\nOSFlag.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\source\nOSList.c">
+		<Unit filename="..\nOS\src\nOSList.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\source\nOSMem.c">
+		<Unit filename="..\nOS\src\nOSMem.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\source\nOSMutex.c">
+		<Unit filename="..\nOS\src\nOSMutex.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\source\nOSQueue.c">
+		<Unit filename="..\nOS\src\nOSQueue.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\source\nOSSched.c">
+		<Unit filename="..\nOS\src\nOSSched.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\source\nOSSem.c">
+		<Unit filename="..\nOS\src\nOSSem.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\source\nOSSignal.c">
+		<Unit filename="..\nOS\src\nOSSignal.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\source\nOSThread.c">
+		<Unit filename="..\nOS\src\nOSThread.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\source\nOSTime.c">
+		<Unit filename="..\nOS\src\nOSTime.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\source\nOSTimer.c">
+		<Unit filename="..\nOS\src\nOSTimer.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\source\port\GCC\ARM_Cortex_M4\nOSPort.c">
+		<Unit filename="..\nOS\src\port\GCC\ARM_Cortex_M4\nOSPort.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
 			<code_completion />
 			<debugger>
-				<target_debugging_settings target="Debug" active_interface="ST-link">
+				<target_debugging_settings target="Release" active_interface="ST-link">
 					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
 						<family_options family_id="STMicroelectronics">
 							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
@@ -283,7 +283,7 @@
 						</family_options>
 					</debug_interface>
 				</target_debugging_settings>
-				<target_debugging_settings target="Release" active_interface="ST-link">
+				<target_debugging_settings target="Debug" active_interface="ST-link">
 					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
 						<family_options family_id="STMicroelectronics">
 							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
@@ -304,4 +304,4 @@
 			<envvars />
 		</Extensions>
 	</Project>
-</EmBlocks_project_file>
+</EmBitz_project_file>
