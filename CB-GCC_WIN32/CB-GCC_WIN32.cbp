@@ -31,57 +31,57 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add directory="." />
-			<Add directory="../../include" />
-			<Add directory="../../include/port/WIN32" />
+			<Add directory="./nOS/inc" />
+			<Add directory="./nOS/inc/port/WIN32" />
 		</Compiler>
-		<Unit filename="../../include/nOS.h" />
-		<Unit filename="../../include/port/WIN32/nOSPort.h" />
-		<Unit filename="../../source/nOSAlarm.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../source/nOSEvent.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../source/nOSFlag.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../source/nOSList.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../source/nOSMem.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../source/nOSMutex.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../source/nOSQueue.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../source/nOSSched.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../source/nOSSem.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../source/nOSSignal.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../source/nOSThread.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../source/nOSTime.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../source/nOSTimer.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../source/port/WIN32/nOSPort.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="nOSConfig.h" />
+		<Unit filename="nOS/inc/nOS.h" />
+		<Unit filename="nOS/inc/port/WIN32/nOSPort.h" />
+		<Unit filename="nOS/src/nOSAlarm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS/src/nOSEvent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS/src/nOSFlag.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS/src/nOSList.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS/src/nOSMem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS/src/nOSMutex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS/src/nOSQueue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS/src/nOSSched.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS/src/nOSSem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS/src/nOSSignal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS/src/nOSThread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS/src/nOSTime.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS/src/nOSTimer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS/src/port/WIN32/nOSPort.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />

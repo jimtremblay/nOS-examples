@@ -13,3 +13,6 @@
 [submodule "emBitz-GCC_STM32F746-Discovery/nOS"]
 	path = emBitz-GCC_STM32F746-Discovery/nOS
 	url = https://github.com/jimtremblay/nOS
+[submodule "CB-GCC_WIN32/nOS"]
+	path = CB-GCC_WIN32/nOS
+	url = https://github.com/jimtremblay/nOS
