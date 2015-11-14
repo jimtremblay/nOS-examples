@@ -88,7 +88,50 @@
 		<Unit filename="inc\stm32f4xx.h" />
 		<Unit filename="inc\stm32f4xx_conf.h" />
 		<Unit filename="inc\system_stm32f4xx.h" />
-		<Unit filename="readme.txt" />
+		<Unit filename="nOS\inc\nOS.h" />
+		<Unit filename="nOS\inc\port\GCC\ARM_Cortex_M4\nOSPort.h" />
+		<Unit filename="nOS\src\nOSAlarm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSEvent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSFlag.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSList.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSMem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSMutex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSQueue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSSched.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSSem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSSignal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSThread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSTime.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSTimer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\port\GCC\ARM_Cortex_M4\nOSPort.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="SPL\inc\misc.h" />
 		<Unit filename="SPL\inc\stm32f4xx_adc.h" />
 		<Unit filename="SPL\inc\stm32f4xx_can.h" />
@@ -219,54 +262,10 @@
 		</Unit>
 		<Unit filename="stm32f429zi_flash.ld" />
 		<Unit filename="stm32f429zi_sram.ld" />
-		<Unit filename="..\nOS\inc\nOS.h" />
-		<Unit filename="..\nOS\inc\port\GCC\ARM_Cortex_M4\nOSPort.h" />
-		<Unit filename="..\nOS\src\nOSAlarm.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\nOS\src\nOSEvent.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\nOS\src\nOSFlag.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\nOS\src\nOSList.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\nOS\src\nOSMem.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\nOS\src\nOSMutex.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\nOS\src\nOSQueue.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\nOS\src\nOSSched.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\nOS\src\nOSSem.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\nOS\src\nOSSignal.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\nOS\src\nOSThread.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\nOS\src\nOSTime.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\nOS\src\nOSTimer.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\nOS\src\port\GCC\ARM_Cortex_M4\nOSPort.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Extensions>
 			<code_completion />
 			<debugger>
-				<target_debugging_settings target="Release" active_interface="ST-link">
+				<target_debugging_settings target="Debug" active_interface="ST-link">
 					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
 						<family_options family_id="STMicroelectronics">
 							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
@@ -283,7 +282,7 @@
 						</family_options>
 					</debug_interface>
 				</target_debugging_settings>
-				<target_debugging_settings target="Debug" active_interface="ST-link">
+				<target_debugging_settings target="Release" active_interface="ST-link">
 					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
 						<family_options family_id="STMicroelectronics">
 							<option opt_id="ID_JTAG_SWD" opt_value="swd" />

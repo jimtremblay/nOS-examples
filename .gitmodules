@@ -1,3 +1,9 @@
-[submodule "nOS"]
-	path = nOS
+[submodule "emBitz-GCC_STM32F429I-Discovery/nOS"]
+	path = emBitz-GCC_STM32F429I-Discovery/nOS
 	url = https://github.com/jimtremblay/nOS
+[submodule "GCC_Linux/nOS"]
+	path = GCC_Linux/nOS
+	url = https://github.com/jimtremblay/nOS.git
+[submodule "GCC_STM32F429I-Discovery/nOS"]
+	path = GCC_STM32F429I-Discovery/nOS
+	url = https://github.com/jimtremblay/nOS.git

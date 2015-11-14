@@ -1,6 +1,6 @@
 EXEC=GCC_Linux
-SRCS:=$(wildcard *.c) $(wildcard ../nOS/src/*.c) $(wildcard ../nOS/src/port/POSIX/*.c)
-INCS=-Iconfig -I../nOS/inc -I../nOS/inc/port/POSIX
+SRCS:=$(wildcard *.c) $(wildcard nOS/src/*.c) $(wildcard nOS/src/port/POSIX/*.c)
+INCS=-Iconfig -InOS/inc -InOS/inc/port/POSIX
 LIBS=-lpthread
 #######################################################################################
 
