@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<EmBlocks_project_file>
-	<EmBlocksVersion release="2.30" revision="1" />
+<EmBitz_project_file>
+	<EmBitzVersion release="0.40" revision="0" />
 	<FileVersion major="1" minor="0" />
 	<Project>
-		<Option title="emBlocks-GCC_STM32L1-Discovery" />
+		<Option title="emBitz-GCC_STM32L152C-Discovery" />
 		<Option pch_mode="2" />
 		<Option compiler="armgcc_eb" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin\Debug\emBlocks-GCC_STM32L1-Discovery.elf" />
+				<Option output="bin\Debug\emBitz-GCC_STM32L152C-Discovery.elf" />
 				<Option object_output="obj\Debug\" />
 				<Option type="0" />
 				<Option compiler="armgcc_eb" />
@@ -29,7 +29,7 @@
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin\Release\emBlocks-GCC_STM32L1-Discovery.elf" />
+				<Option output="bin\Release\emBitz-GCC_STM32L1-Discovery.elf" />
 				<Option object_output="obj\Release\" />
 				<Option type="0" />
 				<Option create_hex="1" />
@@ -62,18 +62,67 @@
 			<Add option="-DUSE_STDPERIPH_DRIVER" />
 			<Add option="-fno-strict-aliasing" />
 			<Add directory=".\inc" />
-			<Add directory=".\src" />
 			<Add directory=".\cmsis" />
 			<Add directory=".\SPL\inc" />
-			<Add directory=".\SPL\src" />
-			<Add directory="..\..\source" />
-			<Add directory="..\..\source\port\GCC\ARM_Cortex_M3" />
+			<Add directory=".\nOS\inc" />
+			<Add directory=".\nOS\inc\port\GCC\ARM_Cortex_M3" />
 			<Add directory=".\config" />
 		</Compiler>
 		<Linker>
-			<Add option="-eb_start_files" />
 			<Add option="-eb_lib=n" />
+			<Add option="-eb_start_files" />
 		</Linker>
+		<Unit filename="cmsis\core_cm3.h" />
+		<Unit filename="cmsis\core_cmFunc.h" />
+		<Unit filename="cmsis\core_cmInstr.h" />
+		<Unit filename="config\nOSConfig.h" />
+		<Unit filename="inc\stm32l1xx.h" />
+		<Unit filename="inc\stm32l1xx_conf.h" />
+		<Unit filename="inc\system_stm32l1xx.h" />
+		<Unit filename="nOS\inc\nOS.h" />
+		<Unit filename="nOS\inc\port\GCC\ARM_Cortex_M3\nOSPort.h" />
+		<Unit filename="nOS\src\nOSAlarm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSEvent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSFlag.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSList.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSMem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSMutex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSQueue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSSched.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSSem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSSignal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSThread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSTime.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\nOSTimer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nOS\src\port\GCC\ARM_Cortex_M3\nOSPort.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="SPL\inc\misc.h" />
 		<Unit filename="SPL\inc\stm32l1xx_adc.h" />
 		<Unit filename="SPL\inc\stm32l1xx_aes.h" />
@@ -180,14 +229,6 @@
 		<Unit filename="SPL\src\stm32l1xx_wwdg.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="cmsis\core_cm3.h" />
-		<Unit filename="cmsis\core_cmFunc.h" />
-		<Unit filename="cmsis\core_cmInstr.h" />
-		<Unit filename="config\nOSConfig.h" />
-		<Unit filename="inc\stm32l1xx.h" />
-		<Unit filename="inc\stm32l1xx_conf.h" />
-		<Unit filename="inc\system_stm32l1xx.h" />
-		<Unit filename="readme.txt" />
 		<Unit filename="src\main.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -199,55 +240,11 @@
 		</Unit>
 		<Unit filename="stm32l152rc_flash.ld" />
 		<Unit filename="stm32l152rc_sram.ld" />
-		<Unit filename="..\..\include\nOS.h" />
-		<Unit filename="..\..\include\port\GCC\ARM_Cortex_M3\nOSPort.h" />
-		<Unit filename="..\..\source\nOSAlarm.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSEvent.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSFlag.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSList.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSMem.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSMutex.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSQueue.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSSched.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSSem.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSSignal.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSThread.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSTime.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\nOSTimer.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\source\port\GCC\ARM_Cortex_M3\nOSPort.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Extensions>
 			<code_completion />
 			<debugger>
-				<target_debugging_settings target="Release" active_interface="ST-link">
-					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
+				<target_debugging_settings target="Debug" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
 						<family_options family_id="STMicroelectronics">
 							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
 							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
@@ -263,8 +260,8 @@
 						</family_options>
 					</debug_interface>
 				</target_debugging_settings>
-				<target_debugging_settings target="Debug" active_interface="ST-link">
-					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
+				<target_debugging_settings target="Release" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
 						<family_options family_id="STMicroelectronics">
 							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
 							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
@@ -284,4 +281,4 @@
 			<envvars />
 		</Extensions>
 	</Project>
-</EmBlocks_project_file>
+</EmBitz_project_file>

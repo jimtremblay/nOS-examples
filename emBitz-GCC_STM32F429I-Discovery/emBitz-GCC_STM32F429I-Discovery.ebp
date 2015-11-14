@@ -3,12 +3,12 @@
 	<EmBitzVersion release="0.40" revision="0" />
 	<FileVersion major="1" minor="0" />
 	<Project>
-		<Option title="emBlocks-GCC_STM32F429I-Discovery" />
+		<Option title="emBitz-GCC_STM32F429I-Discovery" />
 		<Option pch_mode="2" />
 		<Option compiler="armgcc_eb" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin\Debug\emBlocks-GCC_STM32F429I-Discovery.elf" />
+				<Option output="bin\Debug\emBitz-GCC_STM32F429I-Discovery.elf" />
 				<Option object_output="obj\Debug\" />
 				<Option type="0" />
 				<Option compiler="armgcc_eb" />
@@ -31,7 +31,7 @@
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin\Release\emBlocks-GCC_STM32F429I-Discovery.elf" />
+				<Option output="bin\Release\emBitz-GCC_STM32F429I-Discovery.elf" />
 				<Option object_output="obj\Release\" />
 				<Option type="0" />
 				<Option create_hex="1" />
@@ -66,17 +66,15 @@
 			<Add option="-DUSE_STDPERIPH_DRIVER" />
 			<Add option="-fno-strict-aliasing" />
 			<Add directory=".\inc" />
-			<Add directory=".\src" />
 			<Add directory=".\cmsis" />
 			<Add directory=".\SPL\inc" />
-			<Add directory=".\SPL\src" />
-			<Add directory="..\..\source" />
-			<Add directory="..\..\source\port\GCC\ARM_Cortex_M4" />
+			<Add directory=".\nOS\inc" />
+			<Add directory=".\nOS\inc\port\GCC\ARM_Cortex_M4" />
 			<Add directory=".\config" />
 		</Compiler>
 		<Linker>
-			<Add option="-eb_start_files" />
 			<Add option="-eb_lib=n" />
+			<Add option="-eb_start_files" />
 		</Linker>
 		<Unit filename="cmsis\arm_common_tables.h" />
 		<Unit filename="cmsis\arm_math.h" />
@@ -266,7 +264,7 @@
 			<code_completion />
 			<debugger>
 				<target_debugging_settings target="Debug" active_interface="ST-link">
-					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
 						<family_options family_id="STMicroelectronics">
 							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
 							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
@@ -283,7 +281,7 @@
 					</debug_interface>
 				</target_debugging_settings>
 				<target_debugging_settings target="Release" active_interface="ST-link">
-					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
 						<family_options family_id="STMicroelectronics">
 							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
 							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />

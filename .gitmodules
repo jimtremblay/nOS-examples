@@ -7,3 +7,6 @@
 [submodule "GCC_STM32F429I-Discovery/nOS"]
 	path = GCC_STM32F429I-Discovery/nOS
 	url = https://github.com/jimtremblay/nOS.git
+[submodule "emBitz-GCC_STM32L152C-Discovery/nOS"]
+	path = emBitz-GCC_STM32L152C-Discovery/nOS
+	url = https://github.com/jimtremblay/nOS
