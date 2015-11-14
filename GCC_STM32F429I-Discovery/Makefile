@@ -3,8 +3,8 @@ EXEC=GCC_STM32F429I-Discovery
 
 # Put your source files here (or *.c, etc)
 ASMS:=$(wildcard src/*.S)
-SRCS:=$(wildcard src/*.c) $(wildcard SPL/src/*.c) $(wildcard ../../source/*.c) $(wildcard ../../source/port/GCC/ARM_Cortex_M4/*.c)
-INCS=-Iinc -Icmsis -Iconfig -ISPL/inc -I../../include -I../../include/port/GCC/ARM_Cortex_M4
+SRCS:=$(wildcard src/*.c) $(wildcard SPL/src/*.c) $(wildcard ../nOS/src/*.c) $(wildcard ../nOS/src/port/GCC/ARM_Cortex_M4/*.c)
+INCS=-Iinc -Icmsis -Iconfig -ISPL/inc -I../nOS/inc -I../nOS/inc/port/GCC/ARM_Cortex_M4
 LIBS=-L/usr/arm-none-eabi/lib/armv7-m -lc -L/usr/lib/gcc/arm-none-eabi/4.9.3/armv7-m -lgcc
 
 # Normally you shouldn't need to change anything below this line!
