@@ -16,3 +16,6 @@
 [submodule "CB-GCC_WIN32/nOS"]
 	path = CB-GCC_WIN32/nOS
 	url = https://github.com/jimtremblay/nOS
+[submodule "LPCXpresso-GCC_LPC812/nOS"]
+	path = LPCXpresso-GCC_LPC812/nOS
+	url = https://github.com/jimtremblay/nOS

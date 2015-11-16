@@ -5,13 +5,10 @@
 
 nOS_Sem semA;
 nOS_Sem semB;
-nOS_Sem semC;
 nOS_Thread threadA;
 nOS_Thread threadB;
-nOS_Thread threadC;
 nOS_Stack stackA[THREAD_STACK_SIZE];
 nOS_Stack stackB[THREAD_STACK_SIZE];
-nOS_Stack stackC[THREAD_STACK_SIZE];
 
 const uint32_t OscRateIn = 0;
 const uint32_t ExtRateIn = 0;
@@ -40,16 +37,6 @@ void ThreadB (void *arg)
     }
 }
 
-void ThreadC (void *arg)
-{
-    NOS_UNUSED(arg);
-
-    while (1) {
-        nOS_SemTake(&semC, NOS_WAIT_INFINITE);
-        nOS_SemGive(&semB);
-    }
-}
-
 void SysTick_Init(void)
 {
     SystemCoreClockUpdate();
@@ -65,15 +52,13 @@ int main()
 
     nOS_SemCreate(&semA, 0, 1);
     nOS_SemCreate(&semB, 0, 1);
-    nOS_SemCreate(&semC, 0, 1);
 
     nOS_ThreadCreate(&threadA, ThreadA, 0, stackA, THREAD_STACK_SIZE, NOS_CONFIG_HIGHEST_THREAD_PRIO,   NOS_THREAD_READY, "ThreadA");
     nOS_ThreadCreate(&threadB, ThreadB, 0, stackB, THREAD_STACK_SIZE, NOS_CONFIG_HIGHEST_THREAD_PRIO-1, NOS_THREAD_READY, "ThreadB");
-    nOS_ThreadCreate(&threadC, ThreadC, 0, stackC, THREAD_STACK_SIZE, NOS_CONFIG_HIGHEST_THREAD_PRIO-2, NOS_THREAD_READY, "ThreadC");
 
     nOS_Start(SysTick_Init);
 
     while (1) {
-        nOS_SemGive(&semC);
+        nOS_SemGive(&semB);
     }
 }

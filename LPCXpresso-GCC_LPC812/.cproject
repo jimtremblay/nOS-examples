@@ -33,10 +33,9 @@
 								<option id="gnu.c.compiler.option.misc.other.2018376406" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections" valueType="string"/>
 								<option id="gnu.c.compiler.option.include.paths.1483836586" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\inc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\inc\nOS&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\inc\lpc_chip_8xx_lib&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\..\..\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\..\..\include\port\GCC\ARM_Cortex_M0&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\nOS\inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\nOS\inc\port\GCC\ARM_Cortex_M0&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.dialect.std.1710323044" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" value="gnu.c.compiler.dialect.c99" valueType="enumerated"/>
 								<inputType id="com.crt.advproject.compiler.input.329237848" superClass="com.crt.advproject.compiler.input"/>
@@ -69,6 +68,10 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="com.crt.advproject.config.exe.debug.2063807082.1729712259" name="TEMPLATE_nOSConfig.h" rcbsApplicability="disable" resourcePath="nOS/inc/TEMPLATE_nOSConfig.h" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding="nOS/src/port/GCC/RX600|nOS/src/port/GCC/MSP430|nOS/src/port/GCC/M16C_R8C|nOS/src/port/GCC/AVR|nOS/src/port/GCC/ARM_Cortex_M7|nOS/src/port/GCC/ARM_Cortex_M4|nOS/src/port/GCC/ARM_Cortex_M3|nOS/src/port/XC16|nOS/src/port/WIN32|nOS/src/port/POSIX|nOS/src/port/NC30|nOS/src/port/Keil|nOS/src/port/IAR|nOS/inc/TEMPLATE_nOSConfig.h|nOS/inc/port/GCC/RX600|nOS/inc/port/GCC/MSP430|nOS/inc/port/GCC/M16C_R8C|nOS/inc/port/GCC/AVR|nOS/inc/port/GCC/ARM_Cortex_M7|nOS/inc/port/GCC/ARM_Cortex_M4|nOS/inc/port/GCC/ARM_Cortex_M3|nOS/inc/port/XC16|nOS/inc/port/WIN32|nOS/inc/port/POSIX|nOS/inc/port/NC30|nOS/inc/port/Keil|nOS/inc/port/IAR" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -136,6 +139,10 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="com.crt.advproject.config.exe.release.1845897483.2048799897" name="TEMPLATE_nOSConfig.h" rcbsApplicability="disable" resourcePath="nOS/inc/TEMPLATE_nOSConfig.h" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding="nOS/src/port/GCC/RX600|nOS/src/port/GCC/MSP430|nOS/src/port/GCC/M16C_R8C|nOS/src/port/GCC/AVR|nOS/src/port/GCC/ARM_Cortex_M7|nOS/src/port/GCC/ARM_Cortex_M4|nOS/src/port/GCC/ARM_Cortex_M3|nOS/src/port/XC16|nOS/src/port/WIN32|nOS/src/port/POSIX|nOS/src/port/NC30|nOS/src/port/Keil|nOS/src/port/IAR|nOS/inc/TEMPLATE_nOSConfig.h|nOS/inc/port/GCC/RX600|nOS/inc/port/GCC/MSP430|nOS/inc/port/GCC/M16C_R8C|nOS/inc/port/GCC/AVR|nOS/inc/port/GCC/ARM_Cortex_M7|nOS/inc/port/GCC/ARM_Cortex_M4|nOS/inc/port/GCC/ARM_Cortex_M3|nOS/inc/port/XC16|nOS/inc/port/WIN32|nOS/inc/port/POSIX|nOS/inc/port/NC30|nOS/inc/port/Keil|nOS/inc/port/IAR" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -162,27 +169,27 @@
 &lt;memory id="Periph" is_volatile="true" type="Peripheral"/&gt;&#13;
 &lt;memoryInstance derived_from="Flash" id="MFlash16" location="0x0" size="0x4000"/&gt;&#13;
 &lt;memoryInstance derived_from="RAM" id="RamLoc4" location="0x10000000" size="0x1000"/&gt;&#13;
-&lt;peripheralInstance derived_from="V6M_NVIC" determined="infoFile" id="NVIC" location="0xe000e000"/&gt;&#13;
-&lt;peripheralInstance derived_from="V6M_DCR" determined="infoFile" id="DCR" location="0xe000edf0"/&gt;&#13;
-&lt;peripheralInstance derived_from="WWDT" determined="infoFile" id="WWDT" location="0x40000000"/&gt;&#13;
-&lt;peripheralInstance derived_from="MRT" determined="infoFile" id="MRT" location="0x40004000"/&gt;&#13;
-&lt;peripheralInstance derived_from="WKT" determined="infoFile" id="WKT" location="0x40008000"/&gt;&#13;
-&lt;peripheralInstance derived_from="SWM" determined="infoFile" id="SWM" location="0x4000c000"/&gt;&#13;
-&lt;peripheralInstance derived_from="PMU" determined="infoFile" id="PMU" location="0x40020000"/&gt;&#13;
-&lt;peripheralInstance derived_from="CMP" determined="infoFile" id="CMP" location="0x40024000"/&gt;&#13;
-&lt;peripheralInstance derived_from="FLASHCTRL" determined="infoFile" id="FLASHCTRL" location="0x40040000"/&gt;&#13;
-&lt;peripheralInstance derived_from="IOCON" determined="infoFile" id="IOCON" location="0x40044000"/&gt;&#13;
-&lt;peripheralInstance derived_from="SYSCON" determined="infoFile" id="SYSCON" location="0x40048000"/&gt;&#13;
-&lt;peripheralInstance derived_from="I2C" determined="infoFile" id="I2C" location="0x40050000"/&gt;&#13;
-&lt;peripheralInstance derived_from="SPI0" determined="infoFile" id="SPI0" location="0x40058000"/&gt;&#13;
-&lt;peripheralInstance derived_from="SPI1" determined="infoFile" id="SPI1" location="0x4005c000"/&gt;&#13;
-&lt;peripheralInstance derived_from="USART0" determined="infoFile" id="USART0" location="0x40064000"/&gt;&#13;
-&lt;peripheralInstance derived_from="USART1" determined="infoFile" id="USART1" location="0x40068000"/&gt;&#13;
-&lt;peripheralInstance derived_from="USART2" determined="infoFile" id="USART2" location="0x4006c000"/&gt;&#13;
-&lt;peripheralInstance derived_from="CRC" determined="infoFile" id="CRC" location="0x50000000"/&gt;&#13;
-&lt;peripheralInstance derived_from="SCT" determined="infoFile" id="SCT" location="0x50004000"/&gt;&#13;
-&lt;peripheralInstance derived_from="GPIO-PORT" determined="infoFile" id="GPIO-PORT" location="0xa0000000"/&gt;&#13;
-&lt;peripheralInstance derived_from="PIN-INT" determined="infoFile" id="PIN-INT" location="0xa0004000"/&gt;&#13;
+&lt;peripheralInstance derived_from="V6M_NVIC" id="NVIC" location="0xe000e000"/&gt;&#13;
+&lt;peripheralInstance derived_from="V6M_DCR" id="DCR" location="0xe000edf0"/&gt;&#13;
+&lt;peripheralInstance derived_from="WWDT" id="WWDT" location="0x40000000"/&gt;&#13;
+&lt;peripheralInstance derived_from="MRT" id="MRT" location="0x40004000"/&gt;&#13;
+&lt;peripheralInstance derived_from="WKT" id="WKT" location="0x40008000"/&gt;&#13;
+&lt;peripheralInstance derived_from="SWM" id="SWM" location="0x4000c000"/&gt;&#13;
+&lt;peripheralInstance derived_from="PMU" id="PMU" location="0x40020000"/&gt;&#13;
+&lt;peripheralInstance derived_from="CMP" id="CMP" location="0x40024000"/&gt;&#13;
+&lt;peripheralInstance derived_from="FLASHCTRL" id="FLASHCTRL" location="0x40040000"/&gt;&#13;
+&lt;peripheralInstance derived_from="IOCON" id="IOCON" location="0x40044000"/&gt;&#13;
+&lt;peripheralInstance derived_from="SYSCON" id="SYSCON" location="0x40048000"/&gt;&#13;
+&lt;peripheralInstance derived_from="I2C" id="I2C" location="0x40050000"/&gt;&#13;
+&lt;peripheralInstance derived_from="SPI0" id="SPI0" location="0x40058000"/&gt;&#13;
+&lt;peripheralInstance derived_from="SPI1" id="SPI1" location="0x4005c000"/&gt;&#13;
+&lt;peripheralInstance derived_from="USART0" id="USART0" location="0x40064000"/&gt;&#13;
+&lt;peripheralInstance derived_from="USART1" id="USART1" location="0x40068000"/&gt;&#13;
+&lt;peripheralInstance derived_from="USART2" id="USART2" location="0x4006c000"/&gt;&#13;
+&lt;peripheralInstance derived_from="CRC" id="CRC" location="0x50000000"/&gt;&#13;
+&lt;peripheralInstance derived_from="SCT" id="SCT" location="0x50004000"/&gt;&#13;
+&lt;peripheralInstance derived_from="GPIO-PORT" id="GPIO-PORT" location="0xa0000000"/&gt;&#13;
+&lt;peripheralInstance derived_from="PIN-INT" id="PIN-INT" location="0xa0004000"/&gt;&#13;
 &lt;/chip&gt;&#13;
 &lt;processor&gt;&lt;name gcc_name="cortex-m0"&gt;Cortex-M0&lt;/name&gt;&#13;
 &lt;family&gt;Cortex-M&lt;/family&gt;&#13;
