@@ -65,13 +65,14 @@ void ThreadC(void *arg)
 
 NOS_ISR(TIMER2_OVF_vect)
 {
+    TCNT2 += 6;
     nOS_Tick();
 }
 
 static void Timer2Init(void)
 {
-    TCNT2 = 200;
-    TCCR2B = 0x02;
+    TCNT2 = 6;
+    TCCR2B = 0x04;
     TIMSK2_TOIE2 = 1;
 
     /* enable all interrupts */
