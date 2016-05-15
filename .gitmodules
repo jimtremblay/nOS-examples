@@ -19,3 +19,6 @@
 [submodule "LPCXpresso-GCC_LPC812/nOS"]
 	path = LPCXpresso-GCC_LPC812/nOS
 	url = https://github.com/jimtremblay/nOS
+[submodule "IAR_STM8S-Discovery/nOS"]
+	path = IAR_STM8S-Discovery/nOS
+	url = https://github.com/jimtremblay/nOS.git
