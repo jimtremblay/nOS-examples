@@ -2,7 +2,7 @@
 
 ### How to use:
 1. Clone this repository and cd into it:
-    * git clone https://github.com/oclarocque/nOS-examples.git && cd nOS-examples
+    * git clone https://github.com/jimtremblay/nOS-examples.git && cd nOS-examples
 2. Add nOS to the project you want to run:
     * Check if the project uses nOS as a submodule:
         - git submodule status
