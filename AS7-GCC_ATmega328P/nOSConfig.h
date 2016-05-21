@@ -161,6 +161,23 @@
 
 /**********************************************************************************************************************
  *                                                                                                                    *
+ * Enable or disable joining thread (waiting for other thread to complete).                                           *
+ *                                                                                                                    *
+ **********************************************************************************************************************/
+#define NOS_CONFIG_THREAD_JOIN_ENABLE               0
+
+/**********************************************************************************************************************
+ *                                                                                                                    *
+ * Enable or disable variable timeout when thread trying to take sem, lock mutex, wait on flags, ...                  *
+ *                                                                                                                    *
+ * Notes                                                                                                              *
+ *   1. If disabled, everything other than NOS_NO_WAIT for timeout is equivalent to NOS_WAIT_INFINITE.                *
+ *                                                                                                                    *
+ **********************************************************************************************************************/
+#define NOS_CONFIG_WAITING_TIMEOUT_ENABLE           1
+
+/**********************************************************************************************************************
+ *                                                                                                                    *
  * Enable or disable semaphore.                                                                                       *
  *                                                                                                                    *
  * Notes                                                                                                              *
@@ -394,6 +411,17 @@
 
 /**********************************************************************************************************************
  *                                                                                                                    *
+ * Call stack size of timer thread.                                                                                   *
+ *                                                                                                                    *
+ * Notes                                                                                                              *
+ *   1. Only available on AVR platform with IAR compiler.                                                             *
+ *   2. Not used if timer thread is disabled.                                                                         *
+ *                                                                                                                    *
+ **********************************************************************************************************************/
+#define NOS_CONFIG_TIMER_THREAD_CALL_STACK_SIZE     16
+
+/**********************************************************************************************************************
+ *                                                                                                                    *
  * Timer counter width in bits (can be 8, 16, 32 or 64).                                                              *
  *                                                                                                                    *
  * Notes                                                                                                              *
@@ -464,6 +492,17 @@
  *                                                                                                                    *
  **********************************************************************************************************************/
 #define NOS_CONFIG_SIGNAL_THREAD_STACK_SIZE         128
+
+/**********************************************************************************************************************
+ *                                                                                                                    *
+ * Call stack size of signal thread.                                                                                  *
+ *                                                                                                                    *
+ * Notes                                                                                                              *
+ *   1. Only available on AVR platform with IAR compiler.                                                             *
+ *   2. Not used if signal thread is disabled.                                                                        *
+ *                                                                                                                    *
+ **********************************************************************************************************************/
+#define NOS_CONFIG_SIGNAL_THREAD_CALL_STACK_SIZE    16
 
 /**********************************************************************************************************************
  *                                                                                                                    *
@@ -572,3 +611,66 @@
  *                                                                                                                    *
  **********************************************************************************************************************/
 #define NOS_CONFIG_ALARM_THREAD_STACK_SIZE          128
+
+/**********************************************************************************************************************
+ *                                                                                                                    *
+ * Call stack size of alarm thread.                                                                                   *
+ *                                                                                                                    *
+ * Notes                                                                                                              *
+ *   1. Only available on AVR platform with IAR compiler.                                                             *
+ *   2. Not used if alarm thread is disabled.                                                                         *
+ *                                                                                                                    *
+ **********************************************************************************************************************/
+#define NOS_CONFIG_ALARM_THREAD_CALL_STACK_SIZE     16
+
+/**********************************************************************************************************************
+ *                                                                                                                    *
+ * Enable or disable barrier.                                                                                         *
+ *                                                                                                                    *
+ * Notes                                                                                                              *
+ *   1. Can be disabled if not needed by the application to decrease flash space used.                                *
+ *                                                                                                                    *
+ **********************************************************************************************************************/
+#define NOS_CONFIG_BARRIER_ENABLE                   1
+
+/**********************************************************************************************************************
+ *                                                                                                                    *
+ * Enable or disable deleting barrier at run-time.                                                                    *
+ *                                                                                                                    *
+ **********************************************************************************************************************/
+#define NOS_CONFIG_BARRIER_DELETE_ENABLE            1
+
+/**********************************************************************************************************************
+ *                                                                                                                    *
+ * Stack size to use from interrupt service routines in number of nOS_Stack entries.                                  *
+ *                                                                                                                    *
+ * Notes                                                                                                              *
+ *   1. Not used on all platforms.                                                                                    *
+ *                                                                                                                    *
+ **********************************************************************************************************************/
+#define NOS_CONFIG_ISR_STACK_SIZE                   128
+
+/**********************************************************************************************************************
+ *                                                                                                                    *
+ * Add possibility to override NVIC_PRIO_BITS if CMSIS is not used.                                                   *
+ *                                                                                                                    *
+ * Notes                                                                                                              *
+ *   1. Only available on ARM_Cortex_Mx plaforms, not used on the others.                                             *
+ *                                                                                                                    *
+ **********************************************************************************************************************/
+#define NOS_CONFIG_NVIC_PRIO_BITS                   4
+
+/**********************************************************************************************************************
+ *                                                                                                                    *
+ * Highest priority of interrupt service routines that use nOS API. It can enable zero interrupt latency for high     *
+ * priority ISR. Application should not call any nOS API from interrupt service routines with priority higher than    *
+ * this setting. Can't be set to zero.                                                                                *
+ *                                                                                                                    *
+ * Lower number  = Higher priority (except PIC24)                                                                     *
+ * Higher number = Lower priority (except PIC24)                                                                      *
+ *                                                                                                                    *
+ * Notes                                                                                                              *
+ *   1. Not used on all platforms.                                                                                    *
+ *                                                                                                                    *
+ **********************************************************************************************************************/
+#define NOS_CONFIG_MAX_UNSAFE_ISR_PRIO              5

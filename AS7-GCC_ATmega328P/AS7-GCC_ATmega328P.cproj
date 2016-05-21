@@ -2,7 +2,7 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectVersion>6.2</ProjectVersion>
+    <ProjectVersion>7.0</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
     <ProjectGuid>{556488f0-f0ab-4269-ac0f-7770f6342ae5}</ProjectGuid>
     <avrdevice>ATmega328P</avrdevice>
@@ -53,26 +53,43 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
       <AvrGcc>
-  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
-  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
-  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
-  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
-  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
-  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
-  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-  <avrgcc.compiler.directories.IncludePaths><ListValues><Value>..</Value><Value>../../../include</Value><Value>../../../include/port/GCC/AVR</Value></ListValues></avrgcc.compiler.directories.IncludePaths>
-  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
-  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
-  <avrgcc.linker.libraries.Libraries><ListValues><Value>libm</Value></ListValues></avrgcc.linker.libraries.Libraries>
-  <avrgcc.compiler.symbols.DefSymbols><ListValues><Value>NDEBUG</Value></ListValues></avrgcc.compiler.symbols.DefSymbols>
-  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
-</AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.0.90\gcc\dev\atmega328p"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>..</Value>
+            <Value>../../../include</Value>
+            <Value>../../../include/port/GCC/AVR</Value>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.0.90\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+      </AvrGcc>
     </ToolchainSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <AvrGcc>
+  <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.0.90\gcc\dev\atmega328p"</avrgcc.common.Device>
   <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
   <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
   <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
@@ -80,81 +97,102 @@
   <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
   <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
   <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-  <avrgcc.compiler.directories.IncludePaths><ListValues><Value>..</Value><Value>../../../include</Value><Value>../../../include/port/GCC/AVR</Value></ListValues></avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.0.90\include</Value>
+      <Value>..</Value>
+      <Value>../nOS/inc</Value>
+      <Value>../nOS/inc/port/GCC/AVR</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
   <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
   <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
-  <avrgcc.linker.libraries.Libraries><ListValues><Value>libm</Value></ListValues></avrgcc.linker.libraries.Libraries>
-  <avrgcc.compiler.symbols.DefSymbols><ListValues><Value>DEBUG</Value></ListValues></avrgcc.compiler.symbols.DefSymbols>
-  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
   <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
   <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
 </AvrGcc>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\source\nOSAlarm.c">
-      <SubType>compile</SubType>
-      <Link>nOS\nOSAlarm.c</Link>
-    </Compile>
-    <Compile Include="..\..\source\nOSEvent.c">
-      <SubType>compile</SubType>
-      <Link>nOS\nOSEvent.c</Link>
-    </Compile>
-    <Compile Include="..\..\source\nOSFlag.c">
-      <SubType>compile</SubType>
-      <Link>nOS\nOSFlag.c</Link>
-    </Compile>
-    <Compile Include="..\..\source\nOSList.c">
-      <SubType>compile</SubType>
-      <Link>nOS\nOSList.c</Link>
-    </Compile>
-    <Compile Include="..\..\source\nOSMem.c">
-      <SubType>compile</SubType>
-      <Link>nOS\nOSMem.c</Link>
-    </Compile>
-    <Compile Include="..\..\source\nOSMutex.c">
-      <SubType>compile</SubType>
-      <Link>nOS\nOSMutex.c</Link>
-    </Compile>
-    <Compile Include="..\..\source\nOSQueue.c">
-      <SubType>compile</SubType>
-      <Link>nOS\nOSQueue.c</Link>
-    </Compile>
-    <Compile Include="..\..\source\nOSSched.c">
-      <SubType>compile</SubType>
-      <Link>nOS\nOSSched.c</Link>
-    </Compile>
-    <Compile Include="..\..\source\nOSSem.c">
-      <SubType>compile</SubType>
-      <Link>nOS\nOSSem.c</Link>
-    </Compile>
-    <Compile Include="..\..\source\nOSSignal.c">
-      <SubType>compile</SubType>
-      <Link>nOS\nOSSignal.c</Link>
-    </Compile>
-    <Compile Include="..\..\source\nOSThread.c">
-      <SubType>compile</SubType>
-      <Link>nOS\nOSThread.c</Link>
-    </Compile>
-    <Compile Include="..\..\source\nOSTime.c">
-      <SubType>compile</SubType>
-      <Link>nOS\nOSTime.c</Link>
-    </Compile>
-    <Compile Include="..\..\source\nOSTimer.c">
-      <SubType>compile</SubType>
-      <Link>nOS\nOSTimer.c</Link>
-    </Compile>
-    <Compile Include="..\..\source\port\GCC\AVR\nOSPort.c">
-      <SubType>compile</SubType>
-      <Link>nOS\nOSPort.c</Link>
-    </Compile>
     <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOSConfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\inc\nOS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\inc\port\GCC\AVR\nOSPort.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\nOSAlarm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\nOSBarrier.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\nOSEvent.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\nOSFlag.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\nOSList.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\nOSMem.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\nOSMutex.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\nOSQueue.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\nOSSched.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\nOSSem.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\nOSSignal.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\nOSThread.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\nOSTime.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\nOSTimer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nOS\src\port\GCC\AVR\nOSPort.c">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="nOS" />
+    <Folder Include="nOS\" />
+    <Folder Include="nOS\inc\" />
+    <Folder Include="nOS\inc\port\" />
+    <Folder Include="nOS\inc\port\GCC\" />
+    <Folder Include="nOS\inc\port\GCC\AVR\" />
+    <Folder Include="nOS\src\" />
+    <Folder Include="nOS\src\port\" />
+    <Folder Include="nOS\src\port\GCC\" />
+    <Folder Include="nOS\src\port\GCC\AVR\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
