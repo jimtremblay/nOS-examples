@@ -75,17 +75,17 @@ void ThreadC(void *arg)
     }
 }
 
-NOS_ISR(TIMER2_OVF_vect)
+NOS_ISR(TIMER2_COMPA_vect)
 {
-    TCNT2 += 6;
     nOS_Tick();
 }
 
 static void Timer2Init(void)
 {
-    TCNT2 = 6;
-    TCCR2B = 0b00000100;
-    TIMSK2 = (1 << TOIE2);
+    OCR2A  = 249;           /* Set compare match value        */
+    TCCR2A = 0b00000010;    /* Clear timer on compare match   */
+    TCCR2B = 0b00000100;    /* Use prescaler of 64            */
+    TIMSK2 = (1 << OCIE2A); /* Enable compare match interrupt */
 
     /* enable all interrupts */
     sei();
