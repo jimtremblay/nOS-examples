@@ -11,7 +11,7 @@ nOS_Stack stackA;
 nOS_Stack stackB;
 nOS_Stack stackC;
 
-void ThreadA (void *arg)
+int ThreadA (void *arg)
 {
     while(true) {
         nOS_Print("%s running\n", nOS_ThreadGetName(NULL));
@@ -19,7 +19,7 @@ void ThreadA (void *arg)
     }
 }
 
-void ThreadB (void *arg)
+int ThreadB (void *arg)
 {
     while(true) {
         nOS_Print("%s running\n", nOS_ThreadGetName(NULL));
@@ -28,7 +28,7 @@ void ThreadB (void *arg)
     }
 }
 
-void ThreadC (void *arg)
+int ThreadC (void *arg)
 {
     while(true) {
         nOS_Print("%s running\n", nOS_ThreadGetName(NULL));
@@ -51,7 +51,12 @@ int main(int argc, char *argv[])
     nOS_ThreadCreate(&threadB, ThreadB, NULL, &stackB, 0, NOS_CONFIG_HIGHEST_THREAD_PRIO-1, NOS_THREAD_READY, "ThreadB");
     nOS_ThreadCreate(&threadC, ThreadC, NULL, &stackC, 0, NOS_CONFIG_HIGHEST_THREAD_PRIO-2, NOS_THREAD_READY, "ThreadC");
 
-    nOS_Start(NULL);
+    nOS_Start();
+
+    /* Manually call the scheduler since the
+     * simulator's systick handler cannot do
+     * it due to phtread implementation.     */
+    nOS_Yield();
 
     while (1) {
         nOS_Print("%s running\n", nOS_ThreadGetName(NULL));
