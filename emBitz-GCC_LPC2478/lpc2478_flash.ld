@@ -86,7 +86,7 @@ SECTIONS
 	__exidx_end = .;
 
 	__etext = .;
-		
+
 	.data : AT (__etext)
 	{
 		__data_start__ = .;
@@ -128,7 +128,7 @@ SECTIONS
 		__bss_end__ = .;
 	} > RAM
 
-	
+
 	.heap :
 	{
 		__end__ = .;

@@ -93,65 +93,63 @@
 		</Unit>
 		<Unit filename="inc\LPC24xx.h" />
 		<Unit filename="inc\system_lpc2478.h" />
-		<Unit filename="nOS\inc\nOS.h" />
-		<Unit filename="nOS\inc\port\GCC\ARM7TDMI\nOSPort.h" />
-		<Unit filename="nOS\src\nOSAlarm.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\nOSBarrier.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\nOSEvent.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\nOSFlag.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\nOSList.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\nOSMem.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\nOSMutex.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\nOSQueue.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\nOSSched.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\nOSSem.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\nOSSignal.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\nOSThread.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\nOSTime.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\nOSTimer.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\port\GCC\ARM7_TDMI\nOSPort.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="nOS\src\port\GCC\ARM7_TDMI\nOSPortARM.S">
-			<Option compilerVar="CC" />
-			<Option weight="80" />
-			<Option compiler="armgcc_eb" use="0" buildCommand=" $compiler $device $arch -marm $c_options $c_symbols -c $file -o $object -MMD $includes" />
-		</Unit>
+		<Unit filename="lpc2478_flash.ld" />
 		<Unit filename="src\main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\startup_lpc2478.S">
 			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
 		</Unit>
 		<Unit filename="src\system_lpc2478.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\inc\nOS.h" />
+		<Unit filename="..\..\nOS\inc\port\GCC\ARM7TDMI\nOSPort.h" />
+		<Unit filename="..\..\nOS\src\nOSAlarm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\src\nOSBarrier.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\src\nOSEvent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\src\nOSFlag.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\src\nOSList.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\src\nOSMem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\src\nOSMutex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\src\nOSQueue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\src\nOSSched.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\src\nOSSem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\src\nOSSignal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\src\nOSThread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\src\nOSTime.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\src\nOSTimer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\nOS\src\port\GCC\ARM7_TDMI\nOSPort.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
@@ -185,6 +183,15 @@
 				</target_debugging_settings>
 			</debugger>
 			<envvars />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
 		</Extensions>
 	</Project>
 </EmBitz_project_file>
