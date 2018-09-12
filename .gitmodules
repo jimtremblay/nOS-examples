@@ -25,3 +25,6 @@
 [submodule "AS7-GCC_ATmega328P/nOS"]
 	path = AS7-GCC_ATmega328P/nOS
 	url = https://github.com/jimtremblay/nOS.git
+[submodule "emBitz-GCC_LPC2478/nOS"]
+	path = emBitz-GCC_LPC2478/nOS
+	url = http://github.com/jimtremblay/nOS.git
