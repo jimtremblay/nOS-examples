@@ -1,6 +1,6 @@
 [submodule "emBitz-GCC_STM32F429I-Discovery/nOS"]
 	path = emBitz-GCC_STM32F429I-Discovery/nOS
-	url = https://github.com/jimtremblay/nOS.git
+	url = https://github.com/jimtremblay/nOS
 [submodule "GCC_Linux/nOS"]
 	path = GCC_Linux/nOS
 	url = https://github.com/jimtremblay/nOS.git
@@ -9,22 +9,19 @@
 	url = https://github.com/jimtremblay/nOS.git
 [submodule "emBitz-GCC_STM32L152C-Discovery/nOS"]
 	path = emBitz-GCC_STM32L152C-Discovery/nOS
-	url = https://github.com/jimtremblay/nOS.git
+	url = https://github.com/jimtremblay/nOS
 [submodule "emBitz-GCC_STM32F746-Discovery/nOS"]
 	path = emBitz-GCC_STM32F746-Discovery/nOS
-	url = https://github.com/jimtremblay/nOS.git
+	url = https://github.com/jimtremblay/nOS
 [submodule "CB-GCC_WIN32/nOS"]
 	path = CB-GCC_WIN32/nOS
-	url = https://github.com/jimtremblay/nOS.git
+	url = https://github.com/jimtremblay/nOS
 [submodule "LPCXpresso-GCC_LPC812/nOS"]
 	path = LPCXpresso-GCC_LPC812/nOS
-	url = https://github.com/jimtremblay/nOS.git
+	url = https://github.com/jimtremblay/nOS
 [submodule "IAR_STM8S-Discovery/nOS"]
 	path = IAR_STM8S-Discovery/nOS
 	url = https://github.com/jimtremblay/nOS.git
 [submodule "AS7-GCC_ATmega328P/nOS"]
 	path = AS7-GCC_ATmega328P/nOS
-	url = https://github.com/jimtremblay/nOS.git
-[submodule "emBitz-GCC_LPC2478/nOS"]
-	path = emBitz-GCC_LPC2478/nOS
 	url = https://github.com/jimtremblay/nOS.git
