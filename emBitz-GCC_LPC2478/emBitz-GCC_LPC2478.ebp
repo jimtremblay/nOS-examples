@@ -84,6 +84,7 @@
 			<Add option="-fomit-frame-pointer" />
 			<Add option="-O0" />
 			<Add option="-g" />
+			<Add option="-marm" />
 		</Cpp>
 		<Assembler>
 			<Add option="-Wa,-mthumb-interwork" />
