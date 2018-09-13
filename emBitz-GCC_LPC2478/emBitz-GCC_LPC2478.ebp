@@ -67,7 +67,6 @@
 		</Device>
 		<Compiler>
 			<Add option="-mthumb-interwork" />
-			<Add option="-eb_arm" />
 			<Add option="-std=c11" />
 			<Add option="-fshort-enums" />
 			<Add option="-fomit-frame-pointer" />
@@ -75,13 +74,23 @@
 			<Add option="-g" />
 			<Add option="-fno-strict-aliasing" />
 			<Add option="-fno-dwarf2-cfi-asm" />
+			<Add option="-marm" />
 			<Add directory=".\Inc" />
 		</Compiler>
+		<Cpp>
+			<Add option="-mthumb-interwork" />
+			<Add option="-std=c++14" />
+			<Add option="-fshort-enums" />
+			<Add option="-fomit-frame-pointer" />
+			<Add option="-O0" />
+			<Add option="-g" />
+		</Cpp>
 		<Assembler>
 			<Add option="-Wa,-mthumb-interwork" />
 			<Add option="-Wa,-ahls=$objects_output_dir\$file_name.lst" />
 			<Add option="-Wa,--keep-locals" />
 			<Add option="-Wa,--gdwarf-2" />
+			<Add option="-marm" />
 		</Assembler>
 		<Linker>
 			<Add option="-eb_lib=n" />
@@ -93,14 +102,11 @@
 		</Unit>
 		<Unit filename="inc\LPC24xx.h" />
 		<Unit filename="inc\system_lpc2478.h" />
-		<Unit filename="lpc2478_flash.ld" />
 		<Unit filename="src\main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\startup_lpc2478.S">
 			<Option compilerVar="CC" />
-			<Option compile="0" />
-			<Option link="0" />
 		</Unit>
 		<Unit filename="src\system_lpc2478.c">
 			<Option compilerVar="CC" />
@@ -183,15 +189,6 @@
 				</target_debugging_settings>
 			</debugger>
 			<envvars />
-			<DoxyBlocks>
-				<comment_style block="0" line="0" />
-				<doxyfile_project />
-				<doxyfile_build />
-				<doxyfile_warnings />
-				<doxyfile_output />
-				<doxyfile_dot />
-				<general />
-			</DoxyBlocks>
 		</Extensions>
 	</Project>
 </EmBitz_project_file>

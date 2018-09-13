@@ -11,7 +11,6 @@
 
 .global Isr_vector
 .global Reset_Handler
-.global b_arm
 .global __StackLimit
 .global __StackTop
 .global __HeapBase
@@ -112,7 +111,6 @@ FIQ_Addr:   .word   FIQ_Handler     // FIQ Routine
    .arm
    .align 0
 
-b_arm:
 .func Reset_Handler
 Reset_Handler:
        ldr     r0, =__StackTop

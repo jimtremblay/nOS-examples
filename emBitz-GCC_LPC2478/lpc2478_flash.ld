@@ -38,7 +38,7 @@ MEMORY
  *   __StackTop
  */
 
- ENTRY(Reset_Handler)
+ENTRY(Reset_Handler)
 
 SECTIONS
 {
@@ -128,12 +128,12 @@ SECTIONS
 		__bss_end__ = .;
 	} > RAM
 
-
 	.heap :
 	{
 		__end__ = .;
 		end = __end__;
-        KEEP(*(.heap*));
+		*(.heap*)
+		__HeapLimit = .;
 	} > RAM
 
 	/* .stack_dummy section doesn't contains any symbols. It is only
