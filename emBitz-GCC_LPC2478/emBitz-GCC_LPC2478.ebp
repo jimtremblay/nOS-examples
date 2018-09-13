@@ -112,51 +112,51 @@
 		<Unit filename="src\system_lpc2478.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\inc\nOS.h" />
-		<Unit filename="..\..\nOS\inc\port\GCC\ARM7TDMI\nOSPort.h" />
-		<Unit filename="..\..\nOS\src\nOSAlarm.c">
+		<Unit filename=".\nOS\inc\nOS.h" />
+		<Unit filename=".\nOS\inc\port\GCC\ARM7TDMI\nOSPort.h" />
+		<Unit filename=".\nOS\src\nOSAlarm.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\src\nOSBarrier.c">
+		<Unit filename=".\nOS\src\nOSBarrier.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\src\nOSEvent.c">
+		<Unit filename=".\nOS\src\nOSEvent.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\src\nOSFlag.c">
+		<Unit filename=".\nOS\src\nOSFlag.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\src\nOSList.c">
+		<Unit filename=".\nOS\src\nOSList.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\src\nOSMem.c">
+		<Unit filename=".\nOS\src\nOSMem.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\src\nOSMutex.c">
+		<Unit filename=".\nOS\src\nOSMutex.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\src\nOSQueue.c">
+		<Unit filename=".\nOS\src\nOSQueue.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\src\nOSSched.c">
+		<Unit filename=".\nOS\src\nOSSched.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\src\nOSSem.c">
+		<Unit filename=".\nOS\src\nOSSem.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\src\nOSSignal.c">
+		<Unit filename=".\nOS\src\nOSSignal.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\src\nOSThread.c">
+		<Unit filename=".\nOS\src\nOSThread.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\src\nOSTime.c">
+		<Unit filename=".\nOS\src\nOSTime.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\src\nOSTimer.c">
+		<Unit filename=".\nOS\src\nOSTimer.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\nOS\src\port\GCC\ARM7_TDMI\nOSPort.c">
+		<Unit filename=".\nOS\src\port\GCC\ARM7_TDMI\nOSPort.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
