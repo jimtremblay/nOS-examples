@@ -3,6 +3,8 @@
 *.ko
 *.obj
 *.elf
+*.depend
+*.elay
 
 # Precompiled Headers
 *.gch
